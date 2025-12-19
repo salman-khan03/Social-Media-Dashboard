@@ -1,0 +1,123 @@
+.header {
+  padding: 30px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.3s ease;
+}
+
+.header.light {
+  background-color: #f5f7ff;
+}
+
+.header.dark {
+  background-color: #1f212e;
+  border-bottom-color: #333a56;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header.light .header-title {
+  color: #1e202a;
+}
+
+.header.dark .header-title {
+  color: #ffffff;
+}
+
+.header-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header.light .header-subtitle {
+  color: #63687e;
+}
+
+.header.dark .header-subtitle {
+  color: #8b97c6;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header.light .toggle-label {
+  color: #63687e;
+}
+
+.header.dark .toggle-label {
+  color: #8b97c6;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-slider {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  background: linear-gradient(to right, #378fe6, #3eda82);
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.toggle-slider::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: #1e202a;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.header.light .toggle-slider::after {
+  background-color: #ffffff;
+}
+
+.toggle-input:checked + .toggle-slider::after {
+  transform: translateX(24px);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .header.dark .header-right {
+    border-top-color: #333a56;
+  }
+}

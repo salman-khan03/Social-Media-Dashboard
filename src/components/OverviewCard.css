@@ -1,0 +1,115 @@
+.overview-card {
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-3px);
+}
+
+.overview-card.light {
+  background-color: #f0f2fa;
+}
+
+.overview-card.dark {
+  background-color: #252a41;
+}
+
+.overview-card.light:hover {
+  background-color: #e1e4f0;
+}
+
+.overview-card.dark:hover {
+  background-color: #333a56;
+}
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.metric-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.overview-card.light .metric-name {
+  color: #63687e;
+}
+
+.overview-card.dark .metric-name {
+  color: #8b97c6;
+}
+
+.platform-icon-small {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.platform-icon-small.platform-facebook::before {
+  content: 'f';
+  color: #178FF5;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.platform-icon-small.platform-twitter::before {
+  content: '🐦';
+  font-size: 18px;
+}
+
+.platform-icon-small.platform-instagram::before {
+  content: '📷';
+  font-size: 18px;
+}
+
+.platform-icon-small.platform-youtube::before {
+  content: '▶';
+  color: #C4032B;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.overview-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.overview-card.light .stat-value {
+  color: #1e202a;
+}
+
+.overview-card.dark .stat-value {
+  color: #ffffff;
+}
+
+.stat-change {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stat-change.positive {
+  color: #1db489;
+}
+
+.stat-change.negative {
+  color: #dc414c;
+}
+
+.stat-change .arrow {
+  font-size: 10px;
+}

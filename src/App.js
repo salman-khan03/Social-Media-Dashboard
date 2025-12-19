@@ -66,14 +66,14 @@ function App() {
       <Header darkMode={darkMode} toggleTheme={toggleTheme} />
       <div className="container">
         <div className="cards-grid">
-          {socialData.map((data, index) => (
-            <SocialCard key={index} data={data} darkMode={darkMode} />
+          {socialData.map((data) => (
+            <SocialCard key={`${data.platform}-${data.username}`} data={data} darkMode={darkMode} />
           ))}
         </div>
         <h2 className="overview-title">Overview - Today</h2>
         <div className="overview-grid">
-          {overviewData.map((data, index) => (
-            <OverviewCard key={index} data={data} darkMode={darkMode} />
+          {overviewData.map((data) => (
+            <OverviewCard key={`${data.platform}-${data.metric}`} data={data} darkMode={darkMode} />
           ))}
         </div>
       </div>

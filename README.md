@@ -141,4 +141,4 @@ This project is open source and available under the MIT License.
 
 ## 🙏 Acknowledgments
 
-Inspired by Frontend Mentor challenges and modern dashboard designs.
+Inspired by modern dashboard designs.
